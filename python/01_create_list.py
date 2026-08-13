@@ -12,5 +12,3 @@ print(type(list3))
 
 thislist = list(("apple", "banana", "kiwi", "cherry"))
 print(thislist)
-
-print("I am practicing Python lists")
