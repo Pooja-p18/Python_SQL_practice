@@ -144,3 +144,44 @@ print(newlist)
 fruits = ["apple", "banana", "cherry", "kiwi", "mango"]
 newlist = [x for x in fruits if "a" in x]
 print(newlist)
+
+fruits = ["apple", "banana", "cherry", "kiwi", "mango"]
+newlist = [x for x in fruits if x != "kiwi"]
+print(newlist)
+
+fruits = ["apple", "banana", "cherry", "kiwi", "mango"]
+newlist = [x for x in fruits]
+print(newlist)
+
+fruits = ["apple", "banana", "cherry", "kiwi", "mango"]
+newlist = [x for x in range(10)]
+print(newlist)
+
+fruits = ["apple", "banana", "cherry", "kiwi", "mango"]
+newlist = [x.upper() for x in fruits]
+print(newlist)
+
+fruits = ["apple", "banana", "cherry", "kiwi", "mango"]
+newlist = ['hello' for x in fruits]
+print(newlist)
+
+fruits = ["apple", "banana", "cherry", "kiwi", "mango"]
+newlist = [x if x != "banana" else "orange" for x in fruits]
+print(newlist)
+
+#Sorting lists
+thislist = ["orange", "mango", "kiwi", "pineapple", "banana"]
+thislist.sort()
+print(thislist)
+
+x = [100,50,20,67,23,82]
+x.sort()
+print(x)
+
+fruits = ["orange", "mango", "kiwi", "pineapple", "banana"]
+fruits.sort(reverse = True)
+print(fruits)
+
+x = [100,50,20,67,23,82]
+x.sort(reverse = True)
+print(x)
