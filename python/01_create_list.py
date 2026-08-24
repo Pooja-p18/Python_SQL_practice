@@ -185,3 +185,60 @@ print(fruits)
 x = [100,50,20,67,23,82]
 x.sort(reverse = True)
 print(x)
+
+#customizing sort function
+def myfunc(n):
+    return abs(n - 50)
+thislist = [100, 50, 65, 82, 23]
+thislist.sort(key=myfunc)
+print(thislist)
+
+#case insenitive sort
+thislist = ["banana", "Orange", "Kiwi", "cherry"]
+thislist.sort()
+print(thislist)
+
+#case insensitive sort
+thislist = ["banana", "Orange", "Kiwi", "cherry"]
+thislist.sort(key = str.lower)
+print(thislist)
+
+#Reverse Order
+thislist = ["banana", "Orange", "Kiwi", "cherry"]
+thislist.reverse()
+print(thislist)
+
+#Copying a List
+thislist = ["apple", "banana", "cherry"]
+mylist = thislist.copy()
+print(mylist)
+
+#list method
+thislist = ["apple", "banana", "cherry"]
+mylist = list(thislist)
+print(mylist)
+
+#Using slice operator
+thislist = ["apple", "banana", "cherry"]
+mylist = thislist[:]
+print(mylist)
+              
+
+#Joining lists
+list1 = ["a", "b", "c"]
+list2 = [1, 2, 3]
+list3 = list1 + list2
+print(list3)
+
+#Appending
+list1 = ["a", "b", "c"]
+list2 = [1, 2, 3]
+for x in list2:
+    list1.append(x)
+print(list1)
+
+#extend method
+list1 = ["a", "b", "c"]
+list2 = [1, 2, 3]
+list1.extend(list2)
+print(list1)
