@@ -64,3 +64,102 @@ def my_function(animal, name, age):
   print("I have a", age, "year old", animal, "named", name)
 my_function("dog", name = "Buddy", age = 5)
 
+def my_func(fruits):
+    for fruit in fruits:
+        print(fruit) 
+my_fruits = ["apple", "banana", "cherry"]
+my_func(my_fruits) 
+
+def my_func(person):
+    print("Name:", person["name"])
+    print("Age:", person["age"])
+my_person = {"name": "Emil", "age": 25}
+my_func(my_person)
+
+def my_func(x, y):
+    return x + y
+result = my_func(5, 3)
+print(result)
+
+def my_func():
+    return ["apple", "banana", "cherry"]
+fruits = my_func()
+print(fruits[0])
+print(fruits[1])
+print(fruits[2])
+
+def my_func():
+     return (10, 20)
+x, y = my_func()
+print("x:", x)
+print("y:", y)
+
+def my_func(name, /):
+    print("Hello", name)
+my_func("Emil")
+
+def my_function(name):
+  print("Hello", name)
+my_function(name = "Emil")
+
+def my_func(*, name):
+    print("Hello", name)
+my_func(name = "Emil")
+
+def my_function(a, b, /, *, c, d):
+  return a + b + c + d
+result = my_function(5, 10, c = 15, d = 20)
+print(result)
+
+def my_function(*kids):
+  print("The youngest child is " + kids[2])
+my_function("Emil", "Tobias", "Linus")
+
+def my_func(*args):
+    print("Type:", type(args))
+    print("First argument:", args[0])
+    print("Second argument:", args[1])
+    print("All arguments:", args)
+my_func("Emil", "Tobias", "Linus")
+
+def my_func(greeting, *names):
+    for name in names:
+        print(greeting, name)
+my_func("Hello", "Emil", "Tobias", "Linus")
+
+def my_func(*numbers):
+    total = 0
+    for num in numbers:
+        total += num
+    return total
+print(my_func(1, 2, 3))
+print(my_func(10, 20, 30, 40))
+print(my_func(5))
+        
+def my_func(*numbers):
+    if len(numbers) == 0:
+        return None
+    max_num = numbers[0]
+    for num in numbers:
+        if num > max_num:
+            max_num = num
+    return max_num
+print(my_func(3, 7, 2, 9, 1))
+    
+def my_func(**kid):
+    print("His last name is " + kid["lname"])
+my_func(fname = "Tobias", lname = "Refsnes")
+
+def my_func(**myvar):
+    print("Type:", type(myvar))
+    print("Name:", myvar["name"])
+    print("Age:", myvar["age"])
+    print("All data:", myvar)
+my_func(name = "Tobias", age = 30, city = "Bergen")
+
+def my_func(username, **details):
+    print("Username:", username)
+    print("Additional details:")
+    for key, value in details.items():
+        print(" ", key + ":", value)
+my_func("email23", age = 25, city = "Oslo", hobby = "Coding")
