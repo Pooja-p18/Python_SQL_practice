@@ -163,3 +163,70 @@ def my_func(username, **details):
     for key, value in details.items():
         print(" ", key + ":", value)
 my_func("email23", age = 25, city = "Oslo", hobby = "Coding")
+
+def my_func(title, *args, **kwargs):
+    print("Title:", title)
+    print("Positional arguments:", args)
+    print("Keyword arguments:", kwargs)
+my_func("User Info", "Emil", "Tobias", age = 25, city = "Oslo")
+
+def my_func(a, b, c):
+    return a + b + c
+numbers = [1, 2, 3]
+result = my_func(*numbers)
+print(result)
+
+def my_function(fname, lname):
+  print("Hello", fname, lname)
+person = {"fname": "Emil", "lname": "Refsnes"}
+my_function(**person) 
+
+#Python scope
+def myfunc():
+    x = 300
+    print(x)
+myfunc()
+
+def myfunc():
+    x = 300
+    def myinnerfunc():
+        print(x)
+    myinnerfunc()
+myfunc()
+
+x = 300
+def myfunc():
+    print(x)
+myfunc()
+print(x)
+
+x = 300
+def myfunc():
+    x = 200
+    print(x)
+myfunc()
+print(x)
+
+def myfunc():
+    global x
+    x = 300
+myfunc()
+print(x)
+
+x = 300
+def myfunc():
+  global x
+  x = 200
+myfunc()
+print(x)
+
+x = "global"
+def outer():
+    x = "enclosing"
+    def inner():
+        x = "local"
+        print("Inner:", x)
+    inner()
+    print("Outer:", x)
+outer()
+print("Global:", x)
